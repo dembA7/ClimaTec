@@ -1,0 +1,48 @@
+body {
+    padding-top: 60px;
+    background: #f2F3F4 !important;
+}
+
+#croqDiv{
+    position: relative;
+}
+
+#Est1{
+    position: absolute;
+    top: 65.3%;
+    left: 67.6%;
+}
+
+
+#Est2{
+    position: absolute;
+    top: 57.4%;
+    left: 28.3%;
+}
+
+#Est3{
+    position: absolute;
+    top: 71%;
+    left: 36.9%;
+}
+
+#Est4{
+    position: absolute;
+    top: 53%;
+    left: 46.7%;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar {
+    background-color: black; 
+}

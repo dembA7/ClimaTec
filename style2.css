@@ -1,0 +1,80 @@
+body {
+    padding-top: 60px;
+    background: black !important;
+}
+
+.navbar {
+    background-color: rgb(10, 10, 10); 
+}
+
+
+.header {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.card{
+    background-color: rgb(22, 21, 21);
+}
+
+#bad::before {
+    color: red;
+    content: "falsas";
+    animation-name: badWords;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+#good::before {
+    color: rgb(149, 249, 0);
+    animation-name: goodWords;
+    content: "exactas";
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes badWords {
+    0%{
+        content:"falsas";
+    }
+    30%{
+        content: "erradas";
+    }
+    60%{
+        content: "generales";
+    }
+    90%{
+        content: "erroneas" ;
+    }
+    100%{
+        content:"falsas";
+    }
+}
+
+@keyframes goodWords {
+    0%{
+        content:"exactas";
+    }
+    40%{
+        content: "específicas";
+    }
+    60%{
+        content: "precisas";
+    }
+    80%{
+        content: "locales";
+    }
+    100%{
+        content: "baratas" ;
+    }
+}
+
+#Antes, #Ahora{
+    min-height: 700px;
+}
+
+
+
+.card{
+    overflow: auto;
+}
