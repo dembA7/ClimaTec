@@ -47,3 +47,4 @@ Para la creación de la página se utilizó bootstrap, HTML y CSS para la estili
 * session.php, compara el incio de sesión del usuario con los datos de sesiones de la base de datos
 8) index.php, código HTML de la página principal
 9) project.php, código HTML de la página de explicación del proyecto
+10) Presentación.pdf, contiene la explicación del proyecto en formato de slides
