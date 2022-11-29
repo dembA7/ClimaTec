@@ -1,10 +1,27 @@
 # ProyectoFinalIoT
 
+# Equipo
+
+* Pablo Javier Arreola Velasco
+* Ricardo Rosales Castañeda
+* Erick Cabrera 
+* Arturo 
+* Miguel Angel Tena García 
+
+
+## Sobre el proyecto
+
+Las predicciones meteorólogicas necesitan más datos para realizar mejores predicciones, la recolección de datos atmosféricos es caro, el objetivo del proyecto es la creación de estaciones de monitoreo más accesibles que puedan generar más datos. El proyecto también contempla la creación de una página web en la que los usuarios puedan consultar las mediciones de nuestras primeras estaciones. Los primeros prototipos estarán ubicados en el Tecnológico de Monterrey campus Querétaro.
+
+## El hardware detrás del proyecto
 
 
 
 
-## Índice
+
+
+## Archivos
+
 1) Asssets, contiene todas las imágenes, vectores y gifs que estilizaron el proyecto
 2) climatec, contiene la configuración de la primera estación de monitoreo
 3) climatec1, contiene la configuración de segunda estación, se diferencía de la primer estación por la conexión a la base de datos
