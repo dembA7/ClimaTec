@@ -19,7 +19,7 @@ Para la creación de las estaciones se utilizo el microcontrolador MCU SP8266MOD
 
 ## El software detrás del proyecto
 
-Para la creación de la página se utilizó bootstrap, HTML y CSS para la estilización, en cuanto el backend se utilizó PHP y XML
+Para la creación de la página se utilizó bootstrap, HTML y CSS para la estilización, en cuanto el backend se utilizó PHP y XML.
 
 
 
