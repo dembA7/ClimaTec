@@ -15,8 +15,11 @@ Las predicciones meteorólogicas necesitan más datos para realizar mejores pred
 
 ## El hardware detrás del proyecto
 
+Para la creación de las estaciones se utilizo el microcontrolador MCU SP8266MOD, sensores de temperatura, humedad, presión y luz ambiental, se utilizó el lenguaje de programación C para sistematizar el comportamiento de las estaciones y se consideró el uso de una PCB y un contenedor por impresión 3D. 
 
+## El software detrás del proyecto
 
+Para la creación de la página se utilizó bootstrap, HTML y CSS para la estilización, en cuanto el backend se utilizó PHP y XML
 
 
 
