@@ -4,7 +4,7 @@
 
 * Pablo Javier Arreola Velasco
 * Ricardo Rosales Castañeda
-* Erick Cabrera González
+* Erik Cabrera González
 * Cristian Arturo Díaz
 * Miguel Angel Tena García 
 
