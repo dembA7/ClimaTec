@@ -1,0 +1,30 @@
+CREATE DATABASE ClimaTec;
+USE ClimaTec;
+
+CREATE TABLE node1(
+	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    node VARCHAR(30),
+    temperature FLOAT,
+    humidity FLOAT,
+    shadow INT,
+    pressure FLOAT,
+    reading_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    altitude FLOAT
+);
+
+CREATE TABLE node2(
+	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    node VARCHAR(30),
+    temperature FLOAT,
+    humidity FLOAT,
+    shadow INT,
+    pressure FLOAT,
+    reading_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    altitude FLOAT
+);
+
+CREATE TABLE users(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
+    passcode VARCHAR(100)
+);
