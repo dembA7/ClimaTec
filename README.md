@@ -23,6 +23,7 @@ Para la creación de la página se utilizó bootstrap, HTML y CSS para la estili
 
 
 
+
 ## Archivos
 
 1) Asssets, contiene todas las imágenes, vectores y gifs que estilizaron el proyecto
