@@ -18,6 +18,7 @@ Las predicciones meteorólogicas necesitan más datos para realizar mejores pred
 Para la creación de las estaciones se utilizo el microcontrolador MCU SP8266MOD, sensores de temperatura, humedad, presión y luz ambiental, se utilizó el lenguaje de programación C para sistematizar el comportamiento de las estaciones y se consideró el uso de una PCB y un contenedor por impresión 3D. 
 
 [Diseño de la estación](https://user-images.githubusercontent.com/110910843/204659730-398b251d-ac4a-4d0c-b67a-6aa4eaf1cb2a.jpeg)
+![Diseño de la PCB](https://user-images.githubusercontent.com/110910843/204660313-ffeded9c-e22c-4c13-88ed-9ac9bd159cd5.jpeg)
 
 
 ## El software detrás del proyecto
