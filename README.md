@@ -4,7 +4,7 @@
 
 
 
-##Índice
+## Índice
 1) Asssets, contiene todas las imágenes, vectores y gifs que estilizaron el proyecto
 2) climatec, contiene la configuración de la primera estación de monitoreo
 3) climatec1, contiene la configuración de segunda estación, se diferencía de la primer estación por la conexión a la base de datos
