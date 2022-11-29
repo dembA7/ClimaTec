@@ -1,4 +1,4 @@
-# ProyectoFinalIoT
+# Proyecto Final Internet of Things
 
 # Equipo
 
@@ -11,7 +11,7 @@
 
 ## Sobre el proyecto
 
-Las predicciones meteorólogicas necesitan más datos para realizar mejores predicciones, la recolección de datos atmosféricos es caro, el objetivo del proyecto es la creación de estaciones de monitoreo más accesibles que puedan generar más datos. El proyecto también contempla la creación de una página web en la que los usuarios puedan consultar las mediciones de nuestras primeras estaciones. Los primeros prototipos estarán ubicados en el Tecnológico de Monterrey campus Querétaro.
+Las predicciones meteorólogicas necesitan más datos para realizar mejores predicciones, la recolección de datos atmosféricos es caro, el objetivo del proyecto es la creación de estaciones de monitoreo más accesibles que puedan generar más datos meteorológicos utilizando conceptos de internet of things. El proyecto también contempla la creación de una página web en la que los usuarios puedan consultar las mediciones de nuestras primeras estaciones. Los primeros prototipos estarán ubicados en el Tecnológico de Monterrey campus Querétaro.
 
 ## El hardware detrás del proyecto
 
