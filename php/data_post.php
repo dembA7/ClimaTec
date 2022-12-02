@@ -2,8 +2,8 @@
 //Creates new record as per request
     //Connect to database
     $servername = "localhost";
-    $username = "node1";
-    $password = "ClimaTecNode1";
+    $username = "";
+    $password = "";
     $dbname = "climatec";
 
     // Create connection
