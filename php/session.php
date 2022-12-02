@@ -1,5 +1,8 @@
 <?php
+   //Connect to database
    include("connection.php");
+
+   //validate if the user is logged in
    session_start();
    
    $user_check = $_SESSION['login_user'];

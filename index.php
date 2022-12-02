@@ -1,7 +1,9 @@
+<!-- Connection to db and validate session -->
 <?php
   include ("./php/connection.php");
   include ("./php/session.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,6 +79,7 @@
 
 </html>
 
+<!-- xml funtions to load and update data from db -->
 <script>
   function loadDataCard(){
     var xhttp = new XMLHttpRequest();

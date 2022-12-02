@@ -15,6 +15,7 @@
         echo "Connected to mysql database. ";
     }
 
+    //Get data from sensors and store in variables for POST method
     if(!empty($_POST['node']) && !empty($_POST['temperature']) && !empty($_POST['humidity']) && !empty($_POST['shadow']) && !empty($_POST['pressure']) && !empty($_POST['altitude'])){
     	$node = $_POST['node'];
     	$temperature = $_POST['temperature'];

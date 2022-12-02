@@ -1,3 +1,4 @@
+<!-- Logout from session -->
 <?php
    session_start();
    

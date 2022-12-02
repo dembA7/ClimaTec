@@ -1,7 +1,9 @@
+<!-- Connection to db -->
 <?php
 include("./connection.php");
 ?>
 
+<!-- querys -->
 <?php
 $query1 = "SELECT ROUND(AVG(temperature),2), MIN(temperature), MAX(temperature), ROUND(AVG(humidity),2), MIN(humidity), MAX(humidity), ROUND(AVG(shadow),2), MIN(shadow), MAX(shadow), ROUND(AVG(pressure),2), ROUND(AVG(altitude),2) FROM node1";
 $query2 = "SELECT ROUND(AVG(temperature),2), MIN(temperature), MAX(temperature), ROUND(AVG(humidity),2), MIN(humidity), MAX(humidity), ROUND(AVG(shadow),2), MIN(shadow), MAX(shadow), ROUND(AVG(pressure),2), ROUND(AVG(altitude),2) FROM node2";

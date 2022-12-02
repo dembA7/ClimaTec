@@ -1,7 +1,9 @@
+<!-- Connection to db -->
 <?php
 include("./connection.php");
 ?>
 
+<!-- Get data from db -->
 <?php
 $query1 = "SELECT ROUND(AVG(temperature),2), MIN(temperature), MAX(temperature), ROUND(AVG(humidity),2), MIN(humidity), MAX(humidity), ROUND(AVG(shadow),2), MIN(shadow), MAX(shadow), ROUND(AVG(pressure),2), ROUND(AVG(altitude),2) FROM node1";
 $query2 = "SELECT ROUND(AVG(temperature),2), MIN(temperature), MAX(temperature), ROUND(AVG(humidity),2), MIN(humidity), MAX(humidity), ROUND(AVG(shadow),2), MIN(shadow), MAX(shadow), ROUND(AVG(pressure),2), ROUND(AVG(altitude),2) FROM node2";
@@ -9,6 +11,7 @@ $query3 = "SELECT temperature, humidity, shadow, pressure, altitude FROM node1 O
 $query4 = "SELECT temperature, humidity, shadow, pressure, altitude FROM node2 ORDER BY reading_time DESC LIMIT 1";
 ?>
 
+<!-- Display data from db on map-->
 <img src="./assets/croquis.jpeg" alt="Croquis ITESM QRO" class="img-responsive d-none d-xl-block" width="1150">
 <a href="#BioDiv" id="Est1">
     <?php

@@ -1,3 +1,4 @@
+<!-- connection to db and validation of session -->
 <?php
 include("connection.php");
 session_start();

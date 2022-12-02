@@ -1,3 +1,4 @@
+//libraries and dependencies
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
@@ -5,11 +6,13 @@
 #include <Adafruit_BMP085.h>
 #include <Wire.h>
 
-const char *ssid = "<ssid>";
-const char *password = "<pasword>";
-const IPAddress server(<ip servidor>);
-const int httpPort = <puerto de conexion>;
+//wifi and server credentials
+const char *ssid = "<ssid>"; //wifi ssid replaced by <ssid> with your wifi ssid
+const char *password = "<pasword>"; //wifi password replaced by <password> with your wifi password
+const IPAddress server(<ip servidor>);  //server ip replaced by <ip servidor> with your server ip
+const int httpPort = <puerto de conexion>;  //server port replaced by <puerto de conexion> with your server port
 
+//variables and constants
 #define Photoresistor A0
 #define I2C_SCL 12
 #define I2C_SDA 13
@@ -18,56 +21,70 @@ float temp, hume;
 String PostData, node = "1";
 bool bmp085_present=true;
 
+//definition of sensors and initialization of http and wifi
 DHT dht(2, DHT11);
 Adafruit_BMP085 bmp;
 WiFiClient client;
 HTTPClient http;
 
+//setup function
 void setup() {
+  //begin serial port
   Serial.begin(9600);
 
-  pinMode(5, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(0, OUTPUT);
+  //define state of initial leds
+  pinMode(5, OUTPUT); //init led
+  pinMode(4, OUTPUT); //wifi led
+  pinMode(0, OUTPUT); //server led
 
   digitalWrite(5, HIGH);
   delay(2000);
 
+  //begin wifi connection
   connectToWiFi();
-
+  //begin server connection
   connectToServer();
+  //begin sensors
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
   bmp.begin();
 }
 
+//loop function
 void loop() {
+  //check wifi connection
   if (WiFi.status() != WL_CONNECTED) {
     digitalWrite(4, LOW); 
     connectToWiFi();
   }
   
-  http.begin(client, "http://<host>/Clima-Tec/php/data_post.php");
+  //begin http
+  http.begin(client, "http://<host>/Clima-Tec/php/data_post.php");  //server url replaced by <host> with your server url
 
-  hume = dht.readHumidity();
-  temp = dht.readTemperature();
-  int a_value = analogRead(Photoresistor);
-  int brillo = map(a_value, 0, 1000, 0, 100);
+  //read sensors
+  hume = dht.readHumidity(); //read humidity
+  temp = dht.readTemperature(); //read temperature
+  int a_value = analogRead(Photoresistor); //read photoresistor
+  int brillo = map(a_value, 0, 1000, 0, 100); //map photoresistor value
 
-  float bp =  bmp.readPressure()/100;
-  float ba =  bmp.readAltitude();
+  float bp =  bmp.readPressure()/100; //read pressure
+  float ba =  bmp.readAltitude(); //read altitude
 
+  //print data and generate string for http query
   Serial.println("node = " + node + " temperature = " + temp + " humidity = " + hume + " shadow = " + brillo + " Pressure = " + bp + " altitude = " + ba);
   PostData = "node=" + node + "&temperature=" + temp + "&humidity=" + hume + "&shadow=" + brillo + "&pressure=" + bp + "&altitude=" + ba;
 
+  //send http query
   http.addHeader("Content-Type", "application/x-www-form-urlencoded");
   int httpCode = http.POST(PostData);
   Serial.println(httpCode);
   http.end();
 
+  //delay every 5 minutes
   delay(300000);
 }
 
+//function to connect to wifi
 void connectToWiFi() {
   //Connect to WiFi Network
   Serial.println();
@@ -75,6 +92,7 @@ void connectToWiFi() {
   Serial.println("...");
   WiFi.begin(ssid, password);
   int retries = 0;
+  //Wait for connection
   while ((WiFi.status() != WL_CONNECTED) && (retries < 15)) {
     digitalWrite(4, HIGH);
     delay(500);
@@ -95,6 +113,7 @@ void connectToWiFi() {
   Serial.println(F("Setup ready"));
 }
 
+//function to connect to server
 void connectToServer() {
   if (client.connect(server, httpPort)) {
     Serial.println("Client Connected");
