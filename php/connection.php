@@ -1,7 +1,7 @@
 <?php
   //Connect to database
   $servername = "localhost";
-  $username = "root";
+  $username = "";
   $password = "";
   $dbname = "climatec";
   // Create connection
